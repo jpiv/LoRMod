@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+      const { ipcRenderer } = require('electron')
+
+      function createCardNode(name, cost) {
+          node = document.createElement('h5')
+          node.textContent = `${cost}: ${name}`
+          return node
+      }
+
+      function showRegions(regionsStr) {
+        const regions = regionsStr.split(',')
+        console.log(regions)
+
+
+        const regionData = ipcRenderer.sendSync('get-data', regions)
+
+        regionData.forEach(({ region, threats }) => {
+          const regionNode = document.createElement('h4')
+          const regionNodeClone = regionNode.cloneNode()
+          regionNode.className = 'region-header'
+          regionNode.textContent = region
+          document.getElementById('regions-def').appendChild(regionNode)
+          regionNodeClone.className = 'region-header'
+          regionNodeClone.textContent = region
+          document.getElementById('regions-off').appendChild(regionNodeClone)
+
+          threats.defensive.forEach(({ name, cost }) => {
+            const node = createCardNode(name, cost)
+            document.getElementById('regions-def').appendChild(node)
+          })
+          threats.offensive.forEach(({ name, cost }) => {
+            const node = createCardNode(name, cost)
+            document.getElementById('regions-off').appendChild(node)
+          })
+        })
+      }
+    </script>
+    <div class="region-window">
+      <h1>THREATS</h1>
+      <div class="threat-container">
+        <div class="col">
+          <h3 class="def-header">Defensive</h3>
+          <div id="regions-def">
+          </div>
+        </div>
+        <div class="col">
+          <h3 class="off-header">Offensive</h3>
+          <div id="regions-off">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

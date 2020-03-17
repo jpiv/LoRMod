@@ -1,0 +1,41 @@
+.card-body {
+	background-color: transparent;
+	width: 100vw;
+	height: 100vh;
+	margin: 0px;
+}
+
+.card {
+	width: calc(100vw - 46px);
+	height: calc(100vh - 46px);
+	box-shadow: 0px 0px 20px 3px red;
+	position: absolute;
+	left: 23px;
+	top: 23px;
+}
+
+.region-window {
+	background-color: rgba(0, 0, 0, 0.3);
+	color: white;
+}
+.threat-container {
+	display: flex;
+	flex-direction: row;	
+}
+.col {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+}
+.item {
+	display: flex;
+}
+.def-header {
+	color: blue;
+}
+.off-header {
+	color: orange;
+}
+.region-header {
+	color: #73ff40;
+}

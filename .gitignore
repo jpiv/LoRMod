@@ -1,0 +1,6 @@
+*/node_modules/*
+*/lormod-win32-x64/*
+dist/*
+build/*
+pycache/*
+content/*

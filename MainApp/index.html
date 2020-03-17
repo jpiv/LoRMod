@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <script type="text/javascript" src="./js/python-app-runner.js"></script>
+    <script type="text/javascript" src="./js/lor.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+  </head>
+  <body>
+    <h1>Opponent Regions:</h1>
+    <br />
+    <br />
+    <br />
+    <button onclick="startApp()">Start Python app</button>
+    <button onclick="getPos()">GetCardPositions</button>
+    <button onclick="makeCounterWindow()">makeCounterWindow</button>
+    <button onclick="closeAll()">Close All</button>
+  </body>
+</html>

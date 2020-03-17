@@ -1,0 +1,86 @@
+{
+	"ionia": {
+		"offensive": [{
+			"name": "Will of Ionia",
+			"cost": 4
+		}],
+		"defensive": [{
+			"name": "Will of Ionia",
+			"cost": 4
+		}, {
+			"name": "Deny",
+			"cost": 4
+		}]
+	},
+	"pnz": {
+		"offensive": [{
+			"name": "Mystic Shot",
+			"cost": 2
+		}, {
+			"name": "Get Excited",
+			"cost": 3
+		}, {
+			"name": "Thermo Beam",
+			"cost": "X" 
+		}],
+		"defensive": []
+	},
+	"noxus": {
+		"offensive": [{
+			"name": "Brother's Bond",
+			"cost": 2
+		}, {
+			"name": "Elixer of Wrath",
+			"cost": 1
+		}],
+		"defensive": []
+	},
+	"freljord": {
+		"offensive": [],
+		"defensive": [{
+			"name": "Brittle Steel",
+			"cost": 1
+		}, {
+			"name": "Elixer of Iron",
+			"cost": 1
+		}, {
+			"name": "Flash Freeze",
+			"cost": 3
+		}, {
+			"name": "Harsh Winds",
+			"cost": 6 
+		}]
+	},
+	"demacia": {
+		"offensive": [{
+			"name": "Single Combat",
+			"cost": 2
+		}, {
+			"name": "Judgement",
+			"cost": 8
+		}],
+		"defensive": [{
+			"name": "Barrier",
+			"cost": 3
+		}, {
+			"name": "Spirit's Refuge",
+			"cost": 4
+		}, {
+			"name": "Repost",
+			"cost": 4
+		}]
+	},
+	"si": {
+		"offensive": [{
+			"name": "Black Spear",
+			"cost": 2
+		}, {
+			"name": "Vile Feast",
+			"cost": 2
+		}],
+		"defensive": [{
+			"name": "Mark of the Isles",
+			"cost": 1
+		}]
+	}
+}

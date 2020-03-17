@@ -1,0 +1,20 @@
+{
+  "name": "mainapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron --enable-transparent-visuals index.js",
+    "build-python": "rm -rf ./dist && rm -rf ./build && pyinstaller --console ../RegionFinder/FindRegions.py",
+    "build-electron": "electron-packager ./ lormod --platform=win32 --arch=x64 --overwrite",
+    "copy-dist": "cp -R ./dist ./lormod-win32-x64/dist",
+    "build": "npm run build-python && npm run build-electron && npm run copy-dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^8.1.1",
+    "node-fetch": "^2.6.0"
+  }
+}
