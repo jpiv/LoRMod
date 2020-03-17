@@ -1,6 +1,7 @@
 */node_modules/*
 */lormod-win32-x64/*
-dist/*
-build/*
+*/dist/*
+*/build/*
 pycache/*
 content/*
+*/lormod-win32-x64.zip
