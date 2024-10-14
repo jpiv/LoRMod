@@ -1,5 +1,5 @@
 # LoRMod
-LoR MoD
+Legends of Runeterra game mod.
 
 Uses computer vision via OpenCV piped to an electron app to identify opponent regeions
 
